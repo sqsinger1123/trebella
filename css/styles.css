@@ -1,0 +1,297 @@
+ 
+
+/********************************************************** MIXINS */
+.accented, a.accented {
+  color: #C84;
+}
+.accented:hover {
+  color: orange;
+}
+.clear {
+  clear: both;
+  content: "";
+}
+.page {
+  display:block;
+  background:#FFF;
+  color:#000;
+  padding:10px;
+  margin:10px 0px;
+  clear:both;
+}
+.page:nth-child(odd) {
+  background:#000;
+  color:#FFF;
+}
+
+/********************************************************** RESET, GLOBALS, CUSTOMS, & Misc. */
+
+body, html {
+  overflow-x:hidden;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #333333;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+::selection {
+  background: #C84;
+  color: #FFF;
+}
+a:hover {
+  text-decoration:none;
+}
+
+a.current {
+  background:#CCC;
+}
+
+img {
+  width:100%;
+}
+
+#wrapper {
+  padding:25px;
+  background:-webkit-linear-gradient(black,white);
+  background:-moz-linear-gradient(black,white);
+  background:-o-linear-gradient(black,white);
+  background:-ms-linear-gradient(black,white);
+  background:linear-gradient(black,white);
+}
+
+/********************************************************** Floating Captions  */
+.img-w-caption {
+  position:relative;
+}
+
+.img-w-caption .caption {
+  opacity: 0;
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: rgba(200,10,10,1);
+  padding:5px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.caption a, .caption a:hover, .caption a:visited {
+  color:rgba(200,10,10,1);
+}
+.img-w-caption .caption h3{
+  font-weight: normal;
+  font-size: 36px;
+}
+.caption:hover, a:hover .caption {
+  color:rgba(200,10,10,1);
+}
+.img-w-caption:hover .caption {
+  opacity: 1;
+  bottom: 20px;
+}
+
+/* And the top caption */
+.img-w-caption .topcaption {
+  opacity: 0;
+  position: absolute;
+  top: -30px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: rgba(200,10,10,1);
+  padding:5px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.topcaption a, .topcaption a:hover, .topcaption a:visited {
+  color:rgba(200,10,10,1);
+}
+.img-w-caption .topcaption h3{
+  font-weight: normal;
+  font-size: 36px;
+}
+.topcaption:hover, a:hover .topcaption {
+  color:rgba(200,10,10,1);
+}
+.img-w-caption:hover .topcaption {
+  opacity: 1;
+  top: 20px;
+}
+
+
+
+/********************************************************** Sticky Header 
+* Inspired by http://jsfiddle.net/WDnyb/2/  
+********/
+.sticky-header {
+    width:100%;
+}
+
+.sticky-header .header {
+    background-color: #ccc;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    z-index:50;
+    text-align:left;
+    background:url("../img/pianokeys.png");
+    background-repeat:repeat-x;
+    background-size: auto 100%;
+}
+.sticky-header .outer {
+    background:url("/img/bg_general.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-position:20% 75%;
+    position: relative;
+    top:0;
+    height: 250px;
+    text-align:center;
+    z-index:70;
+}
+.sticky-header .outer .banner {
+    padding: 50px 10%;
+    font-size: 28px;
+}
+.banner .slogan {
+    padding:15px;
+    line-height: 130%;
+    display:block;
+    background:rgba(15,15,15,.7);
+    color:#FFF;
+}
+
+.sticky-header .outer .header {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    top: auto;
+}
+
+.menu{
+    position:relative;
+    left:130px;
+}
+.menu img {
+    height:25px;
+}
+
+.menu a {
+    -webkit-transition: all 0.9s;
+    -moz-transition: all 0.9s;
+    -o-transition: all 0.9s;
+    transition: all 0.9s;
+    padding:10px;
+    background:#FFF;
+    display:inline-block;
+    border:1px solid gray;
+}
+.menu a.current {
+    background:#CCC;
+}
+.menu a:hover {
+    background:#000;
+    color:#FFF;
+}
+
+#top_logo {
+    display:block;
+    position:fixed;
+    top:0;
+    left:25px;
+    z-index:100;
+    width:100px;
+    background:rgba(200,10,10,1);
+    overflow:hidden;
+    border-bottom-right-radius: 20%;
+}
+.top_logo:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #658E15 #fff;
+}
+#top_logo img {
+    width:100%;
+}
+
+@media (max-width: 300px) {
+    #header1 {
+        display:none;
+    }
+    #top_logo {
+        display:none;
+    }
+}
+
+/********************************************************** Home Page  */
+#appdemo { 
+  width:90%;
+  display:inline-block;
+  padding:10px;
+}
+.headline {
+  text-align:center;
+  text-transform: uppercase;
+}
+#home div {
+  display:inline-block;
+}
+
+/********************************************************** About Page  */
+
+#about img {
+  width:50%;
+  display:inline-block;
+}
+
+/********************************************************** Contact Form  */
+#contact_form {
+  width:90%;
+}
+#contact_form input {
+  padding: 5px;
+  margin-bottom:10px;
+  display:block;
+  width:100%;
+  -webkit-transition: all 0.9s;
+  -moz-transition: all 0.9s;
+  -o-transition: all 0.9s;
+  transition: all 0.9s;
+}
+#contact_form textarea {
+  padding:5px;
+  height: 150px; 
+  width: 100%; 
+  margin-bottom:10px;
+  display:block;
+  resize: none;
+}
+#contact_form input[type=submit]:hover {
+  background:#C84;
+}
+#contact_main {
+  width:90%;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+/********************************************************** Footer  */
+#footer {
+  padding:10px;
+  clear:both;
+}

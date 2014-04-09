@@ -1,0 +1,110 @@
+
+/********
+* CSS Code specifically designed for the sticky header
+*
+* Based on http://jsfiddle.net/WDnyb/2/
+********/
+.sticky-header {
+    width:100%;
+}
+
+.sticky-header .header {
+    background-color: #ccc;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    z-index:50;
+    text-align:left;
+    background:url("../img/pianokeys.png");
+    background-repeat:repeat-x;
+    background-size: auto 100%;
+}
+.sticky-header .outer {
+    background:url("/img/bg_general.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-position:20% 75%;
+    position: relative;
+    top:0;
+    height: 250px;
+    text-align:center;
+    z-index:70;
+}
+.sticky-header .outer .banner {
+    padding: 50px 10%;
+    font-size: 28px;
+}
+.banner .slogan {
+    padding:15px;
+    line-height: 130%;
+    display:block;
+    background:rgba(15,15,15,.7);
+    color:#FFF;
+}
+
+.sticky-header .outer .header {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    top: auto;
+}
+
+.menu{
+    position:relative;
+    left:130px;
+}
+.menu img {
+    height:25px;
+}
+
+.menu a {
+    -webkit-transition: all 0.9s;
+    -moz-transition: all 0.9s;
+    -o-transition: all 0.9s;
+    transition: all 0.9s;
+    padding:10px;
+    background:#FFF;
+    display:inline-block;
+    border:1px solid gray;
+}
+.menu a.current {
+    background:#CCC;
+}
+.menu a:hover {
+    background:#000;
+    color:#FFF;
+}
+
+#top_logo {
+    display:block;
+    position:fixed;
+    top:0;
+    left:25px;
+    z-index:100;
+    width:100px;
+    background:rgba(200,10,10,1);
+    overflow:hidden;
+    border-bottom-right-radius: 20%;
+}
+.top_logo:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #658E15 #fff;
+}
+#top_logo img {
+    width:100%;
+}
+
+@media (max-width: 300px) {
+    #header1 {
+        display:none;
+    }
+    #top_logo {
+        display:none;
+    }
+}
