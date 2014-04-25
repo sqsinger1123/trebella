@@ -68,42 +68,23 @@ function update_current(linkname) {
 
 // The "main" function, if you will, of this page.
 function loadpage() {
-    // Hide loading icon
-    $("#loading-icon").slideUp();
-
-    // Rename .page elements for jQuery-enabled menu function
-    // Reason: Internal anchor tags will be unchanged and work well for jumps if noscript; no jumps if script.
-    $(".page").each(function(index,element) { var x = $(element).attr("id") + "_section"; $(element).attr("id",x); x+=1; });
+   $(".page").addClass("smoothScroll");
 
     // Determine and load the current page on pageload (if applicable)
     var page = window.location.hash.substring(1);
     update_current("#" + page);
-    var pgelem = $("#" + page + "_section");
-    if (pgelem.length > 0) // If this page actually exists.
-        pgelem.show();
-    else
-        $("#home_section").show(); // Show the homepage by default, even if passed a bad reference.
-
+    
     // page transition support
     $(".menu a, #home_top a").click(function(e) {
-        // Transition out the current page.
-        $("#main > div").slideUp("slow"); // The active section div is always first (only) child of #main div
-        
         // Update the top menu appropriately.
         linkname = "." + ($(this).attr("href")).substring(1);
-        update_current(linkname); // See my above function for this.
-        
-        // Update the page content accordingly.
-        target = $(this).attr("href") + "_section";
-        $(target).slideDown("slow");        
+        update_current(linkname); // See my above function for this.        
     });
 
 }
 
 // This is the part that calls other functions above.
 $(window).load(function() {
-    // Create loading effect. Wait for a moment, then load the page properly.
-    $(".page").hide();
-    window.setTimeout(function() {loadpage();},1000);
+    loadpage();
 
 });

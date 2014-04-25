@@ -19,7 +19,7 @@
   margin:10px 0px;
   clear:both;
 }
-.page:nth-child(odd) {
+.page:nth-child(even) {
   background:#000;
   color:#FFF;
 }
@@ -56,12 +56,8 @@ img {
 }
 
 #wrapper {
-  padding:25px;
-  background:-webkit-linear-gradient(black,white);
-  background:-moz-linear-gradient(black,white);
-  background:-o-linear-gradient(black,white);
-  background:-ms-linear-gradient(black,white);
-  background:linear-gradient(black,white);
+  padding:0px;
+  background:#000;
 }
 
 /********************************************************** Floating Captions  */
@@ -145,12 +141,12 @@ img {
     bottom: auto;
     z-index:50;
     text-align:left;
-    background:url("../img/pianokeys.png");
+    background:rgba(230,230,230,.5);
     background-repeat:repeat-x;
     background-size: auto 100%;
 }
 .sticky-header .outer {
-    background:url("/img/bg_general.jpg");
+    background:url("../img/bg_general.jpg");
     background-repeat:no-repeat;
     background-size:100%;
     background-position:20% 75%;
@@ -163,6 +159,8 @@ img {
 .sticky-header .outer .banner {
     padding: 50px 10%;
     font-size: 28px;
+    min-width:50%;
+    margin:auto;
 }
 .banner .slogan {
     padding:15px;
@@ -207,7 +205,7 @@ img {
 
 #top_logo {
     display:block;
-    position:fixed;
+    position:absolute;
     top:0;
     left:25px;
     z-index:100;

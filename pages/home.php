@@ -3,7 +3,7 @@
 	            <h2 class="headline">A New Kind of Music Instruction</h2>
 	            <a href="#contact">
 		            <div id="appdemo" class="img-w-caption">
-			            <img src="../img/app_demo.png" alt="Trebella App Demo" />
+			            <img src="img/app_demo.png" alt="Trebella App Demo" />
 			            <div class="topcaption">
 			          	    <h3>Trebella is still in development.</h3>
 			            </div>

@@ -22,7 +22,8 @@
 
     <!-- Stylesheet links: Bootstrap(+resp), GoogleFonts, & custom CSS (made with LESS, Sass, and/or PHP) -->
     <link rel="stylesheet" href="css/normalize.css" type="text/css" />
-   
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+
     <!-- Metadata -->
     <meta name='about' content='Trebella: A New Way to Learn Piano' />
     <meta name='keywords' content='Trebella'/>
@@ -53,5 +54,7 @@
       include("pages/footer.php");
       include("pages/credits.php"); 
     ?>
+
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
   </body>
 </html>
