@@ -28,6 +28,7 @@
 
 body, html {
   overflow-x:hidden;
+  background:#FFF;
 }
 
 a,
@@ -152,14 +153,29 @@ img {
     background-position:20% 75%;
     position: relative;
     top:0;
-    height: 250px;
     text-align:center;
     z-index:70;
+}
+@media (min-width: 700px) {
+  .sticky-header .outer {
+    height:350px;
+  }
+}
+@media (min-width: 500px) and (max-width: 700px) {
+  .sticky-header .outer {
+    height:300px;
+  }
+}
+@media (max-width: 500px) {
+  .sticky-header .outer {
+    height:250px;
+  }
 }
 .sticky-header .outer .banner {
     padding: 50px 10%;
     font-size: 28px;
     min-width:50%;
+    max-width:75%;
     margin:auto;
 }
 .banner .slogan {
